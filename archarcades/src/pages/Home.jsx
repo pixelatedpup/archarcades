@@ -1,42 +1,53 @@
-const Home = () =>{ 
-    return(
-    <div>
-        <section className="flex justify-center flex-col ">
-            <h1> READY FOR FUN?</h1>
-            <p>From Bowling to Arcade Games
-                We got it all! Get ready for the time
-                of your lives at Arch Acades!</p>
-        </section>
-        
-        <section className='flex justify-center flex-row'>
+import Card from '../components/Card'
+import arcade1 from '../assets/Arcade5.png'
+import arcade2 from '../assets/Arcade1.png'
+import arcade3 from '../assets/Arcade2.png'
+import arcade4 from '../assets/Arcade3.png'
 
-            
-            <article className='flex flex-col flex-1'>
-                <h2> About</h2>
-                <p>Welcome to Arch Arcades - Where the fun never ends!<br/>
-                    We provide immersive experiences with each
-                    of our games where you get to to play along with, or against other players.<br/>
-                    Are you ready to go head to head with some of the toughest players in your area? OR are you looking to create unforgettable memories with your buddies? If so, then dont
-                    miss out! Book today!
-            </p>
-            </article>
-            <article className="flex-1"> 
-                <img/>
-            </article>
-        </section>
+const Home = () => {
+    const primaryColor = '#3900AA'
+  return (
+    <div className="">
+      <section className="flex items-center flex-col bg-[#3900AA] pt-[20px] pb-[20px] text-[white]">
+        <h1 className="text-6xl px-[100px] font-['Zen_Dots']">READY FOR FUN?</h1>
+        <p className="text-3xl text-center px-[100px] font-light">
+          From Bowling to Arcade Games<br />
+          We got it all! Get ready for the time
+          of your lives at Arch Arcades!
+        </p>
 
+        <article className='py-[30px]'>
+        <img className= ' border border-[var(--secondary)] rounded-2xl' src={arcade3} alt="Promotional Images" width='477px' height ='677px'/>
+        </article>
 
-        <section className="flex flex-col">
-            <h2> Reviews</h2>
-            <div className="flex flex-row gap-4">
-                <article className="bg-black p-4 rounded-2xl"> </article>
-                <article className="bg-black p-4 rounded-2xl"> </article>
-                <article className="bg-black p-4 rounded-2xl"> </article>
-            </div>
-        </section>
+      </section>
 
+      <section className="flex justify-center flex-row px-[100px] pt-[60px] text-[#3900AA] ">
+        <article className="flex flex-col items-center flex-1 ">
+          <h2 className="text-6xl font-bold">About</h2>
+          <p className="text-3xl font-light pt-[45px]">
+            Welcome to <b>Arch Arcades</b> - Where the fun never ends!<br />
+            We provide immersive experiences with each
+            of our games where you get to play along with, or against other players.<br />
+            Are you ready to go head to head with some of the toughest players in your area? OR are you looking to create unforgettable memories with your buddies? If so, then don't
+            miss out! Book today!
+          </p>
+        </article>
+        <article className="flex flex-col items-center flex-1">
+          <img className="border border-[var(--primary)] rounded-2xl" src={arcade1} alt="arcade preview" width='385px' height='661px'/>
+        </article>
+      </section>
+
+      <section className="flex flex-col items-center pt-[60px] pb-[60px] bg-[var(--light)]">
+        <h2 className="text-6xl text-[var(--primary)] font-bold">Reviews</h2>
+        <div className="flex flex-row gap-4 pt-[40px]">
+          <article className=""><Card/></article>
+          <article className=""><Card/></article>
+          <article className=""><Card/></article>
+        </div>
+      </section>
     </div>
-    );
-}
+  );
+};
 
 export default Home;

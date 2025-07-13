@@ -1,7 +1,7 @@
 const Footer = () =>{
     return(
         <>
-            <div className="bg-indigo-100">
+            <div className="bg-[var(--secondary)]">
                 <p>Footer</p>
             </div>
         </>
