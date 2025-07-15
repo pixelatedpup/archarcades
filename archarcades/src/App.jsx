@@ -1,18 +1,23 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Page from './Page'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
-  useEffect(() => {document.title = "Arch Arcades"},[])
+  useEffect(() => {
+    document.title = "Arch Arcades"
+  }, [])
+
   return (
-      <div class="App"> 
+    <div className="App">
+      <BrowserRouter>
+        {/* <h1>Hello</h1> */}
         <Page/>
-      </div>
+      </BrowserRouter>
+    </div>
   )
 }
 
-export default App;
+export default App
