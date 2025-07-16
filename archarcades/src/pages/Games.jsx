@@ -31,7 +31,7 @@ const Games = () => {
     return (
         <>
             <section className="bg-[var(--primary)]">
-                <h1 className="text-6xl mx-[150px] text-white p-[30px] font-[Zen_Dots] m-[0]  m-auto ">OUR GAMES</h1>
+                <h1 className="text-6xl mx-[150px] text-white p-[90px] font-[Zen_Dots] m-[0]  m-auto text-center">OUR GAMES</h1>
             </section>
             <section className="mx-[150px]">
                 <article className="flex flex-wrap ">
@@ -47,10 +47,10 @@ const Games = () => {
                                 <div className="w-full h-[319px] border border-[var(--primary)] rounded-2xl">
                                     <img src={game.img} alt={game.name} className="object-cover w-full h-full rounded-2xl" />
                                 </div>
-                                <div className="border border-[var(--primary)] rounded-2xl p-[20px] mt-[20px]">
+                                <div className="rounded-2xl p-[20px] mt-[20px] bg-[var(--tertiary)] font-bold text-white text-2xl">
                                     <h3>{game.name}</h3>
                                 </div>
-                                <div className="border border-[var(--primary)] rounded-2xl mt-[20px] p-[20px]">
+                                <div className="border border-[var(--tertiary)] rounded-2xl mt-[20px] p-[20px] bg-[var(--light)]">
                                     {game.year && <p>Year: {game.year}</p>}
                                     {game.description && <p>{game.description}</p>}
                                 </div>
