@@ -1,8 +1,7 @@
-const Card = ({borderRadius='rounded-2xl', borderColor = 'border-[#3900AA]', backgroundColour='bg-[#3900AA]', fontColour=`text-white`}) => {
+const Card = ({children, borderRadius='rounded-2xl', borderColor = 'border-[#3900AA]', backgroundColour='bg-[#3900AA]', fontColour=`text-white`, width="400px", height="351px"}) => {
     return(
-    <div className={`${borderRadius} border ${borderColor} p-4 ${backgroundColour} ${fontColour} `}>
-        <h3 className="text-3xl">Title </h3>
-        <p className="text-xl">Description</p>
+    <div className={`${borderRadius} border ${borderColor} p-4 ${backgroundColour} ${fontColour} w-${width} h-${height} `}>
+        {children}
     </div>
     );
 }

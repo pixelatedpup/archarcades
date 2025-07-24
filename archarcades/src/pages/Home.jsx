@@ -3,12 +3,14 @@ import arcade1 from '../assets/Arcade5.png'
 import arcade2 from '../assets/Arcade1.png'
 import arcade3 from '../assets/Arcade2.png'
 import arcade4 from '../assets/Arcade3.png'
+import Carousel from '../components/Carousel'; 
+
 
 const Home = () => {
     const primaryColor = '#3900AA'
   return (
     <div className="">
-      <section className="flex items-center flex-col bg-[#3900AA] pt-[20px] pb-[20px] text-[white]">
+      <section className="flex items-center flex-col bg-[var(--dark)] pt-[20px] pb-[20px] text-[white]">
         <h1 className="text-6xl px-[100px] font-['Zen_Dots']">READY FOR FUN?</h1>
         <p className="text-3xl text-center px-[100px] font-light">
           From Bowling to Arcade Games<br />
@@ -16,8 +18,8 @@ const Home = () => {
           of your lives at Arch Arcades!
         </p>
 
-        <article className='py-[30px]'>
-        <img className= ' border border-[var(--secondary)] rounded-2xl' src={arcade3} alt="Promotional Images" width='477px' height ='677px'/>
+        <article className='flex flex-row py-[30px] gap-6' >
+        <Carousel/>
         </article>
 
       </section>

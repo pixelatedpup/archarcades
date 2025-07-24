@@ -30,7 +30,7 @@ const Games = () => {
 
     return (
         <>
-            <section className="bg-[var(--primary)]">
+            <section className="bg-[var(--dark)]">
                 <h1 className="text-6xl mx-[150px] text-white p-[90px] font-[Zen_Dots] m-[0]  m-auto text-center">OUR GAMES</h1>
             </section>
             <section className="mx-[150px]">
