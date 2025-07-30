@@ -54,8 +54,8 @@ const Home = () => {
         </article>
       </section>
 
-      <section className="flex flex-col items-center pt-[60px] pb-[60px] bg-[var(--light)]">
-        <h2 className="text-6xl text-[#3900AA] font-bold">Reviews</h2>
+      <section className="flex flex-col items-center pt-[60px] pb-[60px] bg-[var(--tertiary)] mt-[30px] border-t border-[var(--primary)]">
+        <h2 className="text-6xl text-[(--dark)] font-bold">Reviews</h2>
         <div className="flex flex-row gap-4 pt-[40px]">
           {reviews.map((review) => (
             <article className="">

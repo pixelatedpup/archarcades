@@ -4,9 +4,9 @@ const ScoreCard = (props) => {
   return (
     <Card
       borderRadius="rounded-2xl"
-      borderColor="border-[var(--primary)]"
-      backgroundColour="bg-[var(--light)]"
-      fontColour="text-[var(--primary)]"
+      borderColor="border-[var(--darkG)]"
+      backgroundColour="bg-[var(--secondary)]"
+      fontColour="text-[var(--darkG)]"
     >
       <div>photo</div>
       {props.children}
@@ -31,7 +31,7 @@ const Scoreboards = () => {
         </h1>
       </section>
 
-      <section className="flex flex-wrap justify-center gap-10 px-10 py-10">
+      <section className="flex flex-wrap justify-center gap-10 px-10 py-10 mx-[50px] md:mx-[150px]">
         {scores.map((score, i) => (
           <article key={i} className="w-[300px]">
             <ScoreCard>
