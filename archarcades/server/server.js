@@ -14,7 +14,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const RAWG_API_KEY = "af2ae50bf6f34aa69d2e639edbcec784";
+const RAWG_API_KEY = "76efca81ec0f4ec9acd40cfc62a85bae";
 
 app.get("/api/games", async (req, res) => {
   try {

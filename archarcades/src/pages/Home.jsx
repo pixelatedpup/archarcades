@@ -7,7 +7,21 @@ import Carousel from '../components/Carousel';
 
 
 const Home = () => {
-    const primaryColor = '#3900AA'
+
+    const reviews = [
+      {name: "John Constantine",
+        text:"Amazing experience! Would take my family again.",
+        rating:"5/5"
+      },
+            {name: "Samuel Tarly",
+        text:"My and my brother had an amazing time.",
+        rating:"5/5"
+      },
+            {name: "Jesse Pinkman",
+        text:"Such a great time! Would love to experience again",
+        rating:"5/5"
+      }
+    ]
   return (
     <div className="">
       <section className="flex items-center flex-col bg-[var(--dark)] pt-[20px] pb-[20px] text-[white]">
@@ -24,7 +38,7 @@ const Home = () => {
 
       </section>
 
-      <section className="flex justify-center flex-row px-[100px] pt-[60px] text-[#3900AA] ">
+      <section className="flex justify-center flex-row px-[50px] md:px-[100px] pt-[60px] text-[#3900AA] gap-[20px]">
         <article className="flex flex-col items-center flex-1 ">
           <h2 className="text-6xl font-bold">About</h2>
           <p className="text-3xl font-light pt-[45px]">
@@ -41,11 +55,19 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col items-center pt-[60px] pb-[60px] bg-[var(--light)]">
-        <h2 className="text-6xl text-[var(--primary)] font-bold">Reviews</h2>
+        <h2 className="text-6xl text-[#3900AA] font-bold">Reviews</h2>
         <div className="flex flex-row gap-4 pt-[40px]">
-          <article className=""><Card/></article>
-          <article className=""><Card/></article>
-          <article className=""><Card/></article>
+          {reviews.map((review) => (
+            <article className="">
+
+              <Card> 
+                <h2 className='border-b text-[24px] text-center '>{review.name}</h2>
+                <p className='pt-[20px]'>{review.text}</p>
+                <p className='font-bold text-[20px] text-center pt-[20px]'>{review.rating}</p>
+              </Card>
+            </article>
+          ))}
+          
         </div>
       </section>
     </div>

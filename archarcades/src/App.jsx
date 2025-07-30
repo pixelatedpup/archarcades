@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/archarcades">
         {/* <h1>Hello</h1> */}
         <Page/>
       </BrowserRouter>
