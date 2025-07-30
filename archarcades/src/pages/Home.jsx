@@ -61,7 +61,7 @@ const Home = () => {
             <article className="">
 
               <Card> 
-                <h2 className='border-b text-[24px] text-center '>{review.name}</h2>
+                <h2 className='border-b text-[24px] text-center font-bold text-[var(--darkG)]'>{review.name}</h2>
                 <p className='pt-[20px]'>{review.text}</p>
                 <p className='font-bold text-[20px] text-center pt-[20px]'>{review.rating}</p>
               </Card>
