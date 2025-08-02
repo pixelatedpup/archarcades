@@ -14,7 +14,7 @@ const Carousel = () => {
   const nextIndex = (index + 1) % images.length;
 
   useEffect(() => {
-    const transitionDuration = 3000;
+    const transitionDuration = 2700;
     const updateInterval = 50; // update every 50ms
 
     const transitionTimer = setInterval(() => {
@@ -54,13 +54,13 @@ const Carousel = () => {
         </div>
 
         {/* Center Image */}
-        <div className="w-[600px] h-[400px] border-2 border-[var(--primary)] rounded overflow-hidden shadow-xl">
+        <div className="md:w-[600px] md:h-[400px] sm:w-[400px] sm:h-[200px] border-2 border-[var(--primary)] rounded overflow-hidden shadow-xl">
           <img
             key={index}
             src={images[index]}
             alt="Current"
             className={`w-full h-full object-cover transition-all duration-300 ${
-              transitioning ? "scale-95 opacity-70" : "scale-100 opacity-100"
+              transitioning ? "scale-105 opacity-70" : "scale-100 opacity-100"
             }`}
           />
         </div>
@@ -77,9 +77,9 @@ const Carousel = () => {
         
       </div>
             {/* Loading Progress Bar */}
-      <div className="w-[600px] h-2 bg-gray-300 rounded-full overflow-hidden mb-2">
+      <div className="w-[300px] h-2 bg-gray-300 rounded-full overflow-hidden mb-2">
         <div
-          className="h-full bg-[var(--primary)] transition-all"
+          className="h-full bg-[var(--primary)] "
           style={{ width: `${progress}%` }}
         />
       </div>

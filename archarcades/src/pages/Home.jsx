@@ -25,12 +25,14 @@ const Home = () => {
   return (
     <div className="">
       <section className="flex items-center flex-col bg-[var(--dark)] pt-[20px] pb-[20px] text-[white]">
-        <h1 className="text-6xl px-[100px] font-['Zen_Dots']">READY FOR FUN?</h1>
-        <p className="text-3xl text-center px-[100px] font-light">
-          From Bowling to Arcade Games<br />
-          We got it all! Get ready for the time
-          of your lives at Arch Arcades!
-        </p>
+        <article className='flex flex-col justify-center'>
+          <h1 className="text-center text-6xl px-[100px] font-['Zen_Dots']">READY FOR FUN?</h1>
+          <p className="text-3xl text-center px-[100px] font-light m-[20px]">
+            From Bowling to Arcade Games<br />
+            We got it all! Get ready for the time
+            of your lives at Arch Arcades!
+          </p>
+        </article>
 
         <article className='flex flex-row py-[30px] gap-6' >
         <Carousel/>

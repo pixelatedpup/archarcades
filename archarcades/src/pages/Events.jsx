@@ -31,7 +31,7 @@ const Events = () =>{
                         <img
                             src={event.image}
                             alt={event.title}
-                            className="absolute top-0 left-0 w-full h-full object-cover object-center z-0 mask-r-from-80%"
+                            className="absolute top-0 left-0 w-full h-full object-cover object-center z-0 mask-r-from-80% bg-blend-soft-light"
                         />
 
                         {/* dimming the image slightly */}
