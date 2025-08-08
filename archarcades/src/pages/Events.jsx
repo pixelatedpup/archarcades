@@ -23,7 +23,7 @@ const Events = () =>{
                 <h1 className="text-6xl mx-[50px] md:mx-[150px] text-white p-[90px] font-[Zen_Dots] m-[0]  m-auto text-center">OUR EVENTS</h1>
             </section>
 
-            <section className="flex flex-col gap-[20px] py-[50px] mx-[20px] md:mx-[150px]">
+            <section className="flex flex-col gap-[20px] py-[50px] mx-[20px] md:mx-[50px] sm:mx-[20px]">
                 {events.map((event, index) => (
                     <article className="relative flex flex-row items-center justify-between border-[3px] border-[var(--primary)] mx-[50px] md:mx-[150px] p-[30px] rounded-2xl h-[200px] bg-[var(--secondary)] text-[var(--light)] hover:h-[250px] hover:border-[var(--secondary)] hover:text-[var(--light)] hover:bg-[var(--primary)] transition-[1s] overflow-hidden">
 
