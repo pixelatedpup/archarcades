@@ -7,18 +7,14 @@ import './styles.css'
 const Page = () =>{
     return(
         <>
-            <body>
             <div className="min-h-screen flex flex-col">
-                
                 <Header/>
-            
                 <div className="flex-grow">
                     <Body/>
                 </div>
-                
                 <Footer/>
             </div>
-            </body>
+       
         </>
     );
 };

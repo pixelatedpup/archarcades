@@ -57,16 +57,17 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col items-center pt-[60px] pb-[60px] bg-[var(--tertiary)] mt-[30px] border-t border-[var(--primary)]">
-        <h2 className="text-6xl text-[(--dark)] font-bold">Reviews</h2>
-        <div className="flex flex-row gap-4 pt-[40px]">
+        <h2 className="text-6xl text-white font-bold">Reviews</h2>
+        <div className="flex flex-row flex-wrap justify-center gap-4 pt-[40px]">
           {reviews.map((review) => (
             <article className="">
-
-              <Card> 
-                <h2 className='border-b text-[24px] text-center font-bold text-[var(--darkG)]'>{review.name}</h2>
-                <p className='pt-[20px]'>{review.text}</p>
-                <p className='font-bold text-[20px] text-center pt-[20px]'>{review.rating}</p>
-              </Card>
+              <div className='hover:scale-105 hover:transition-[0.5s]'>
+                <Card> 
+                  <h2 className='border-b text-[24px] text-center font-bold text-[var(--darkG)]'>{review.name}</h2>
+                  <p className='pt-[20px]'>{review.text}</p>
+                  <p className='font-bold text-[20px] text-center pt-[20px]'>{review.rating}</p>
+                </Card>
+              </div>
             </article>
           ))}
           
