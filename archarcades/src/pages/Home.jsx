@@ -16,11 +16,11 @@ const Home = () => {
       },
             {name: "Samuel Tarly",
         text:"My and my brother had an amazing time.",
-        rating:"5/5"
+        rating:"4/5"
       },
             {name: "Jesse Pinkman",
         text:"Such a great time! Would love to experience again",
-        rating:"5/5"
+        rating:"4.5/5"
       }
     ]
   return (
@@ -69,7 +69,7 @@ const Home = () => {
                 <Card hover={hoveredCard===index}> 
                   <h2 className='border-b text-[24px] text-center font-bold '>{review.name}</h2>
                   <p className='pt-[20px]'>{review.text}</p>
-                  <p className='font-bold text-[20px] text-center pt-[20px]'>{review.rating}</p>
+                  <p className='font-bold text-[var(--primary)] text-4xl text-center pt-[20px]'>{review.rating}</p>
                 </Card>
               </div>
             </article>

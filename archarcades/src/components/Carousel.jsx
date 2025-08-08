@@ -54,7 +54,7 @@ const Carousel = () => {
         </div>
 
         {/* Center Image */}
-        <div className="md:w-[600px] md:h-[400px] sm:w-[400px] sm:h-[200px] border-2 border-[var(--primary)] rounded overflow-hidden shadow-xl">
+        <div className="lg:w-[600px] lg:h-[400px] md:w-[300px] md:h-[200px] sm:w-[200px] sm:h-[100px] border-2 border-[var(--primary)] rounded overflow-hidden shadow-xl">
           <img
             key={index}
             src={images[index]}

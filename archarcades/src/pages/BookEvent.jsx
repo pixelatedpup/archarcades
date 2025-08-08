@@ -1,4 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import Button from "../components/Button";
+
 // import  Button from "../components/Button";
 
 const InputField = ({label="Default", type="", placeholder="Enter", inputFor=""}) =>{
@@ -14,6 +16,7 @@ const InputField = ({label="Default", type="", placeholder="Enter", inputFor=""}
 
 const BookEvent = () =>{
     const {title} = useParams();
+    const navigate = useNavigate();
 
     const inputs =[ {label:"First Name",type:"", inputFor:"",placeholder:""},
                     {label:"Last Name",type:"", inputFor:"",placeholder:""},
@@ -26,6 +29,10 @@ const BookEvent = () =>{
         <>
         <section className="bg-[var(--dark)]">
                 <h1 className="text-6xl mx-[150px] text-white p-[90px] font-[Zen_Dots] m-[0]  m-auto text-center">BOOK EVENT</h1>
+        </section>
+
+        <section className="pl-[200px] pt-[50px]">
+           <Button nav="/events" text="Back"/>
         </section>
         <section className="flex flex-col align-center mx-[50px] md:mx-[150px] mb-[50px]">
             <article className="flex flex-col items-center flex-1 pt-[50px] pb-[50px] ">
