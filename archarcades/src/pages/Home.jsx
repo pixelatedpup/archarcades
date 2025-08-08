@@ -4,10 +4,11 @@ import arcade2 from '../assets/Arcade1.png'
 import arcade3 from '../assets/Arcade2.png'
 import arcade4 from '../assets/Arcade3.png'
 import Carousel from '../components/Carousel'; 
+import { useState } from 'react'
 
 
 const Home = () => {
-
+    const [hoveredCard, setHoveredCard] = useState(null);
     const reviews = [
       {name: "John Constantine",
         text:"Amazing experience! Would take my family again.",
@@ -43,10 +44,10 @@ const Home = () => {
       <section className="flex justify-center flex-row px-[50px] md:px-[100px] pt-[60px] text-[#3900AA] gap-[20px]">
         <article className="flex flex-col items-center flex-1 ">
           <h2 className="text-6xl font-bold">About</h2>
-          <p className="text-3xl font-light pt-[45px]">
-            Welcome to <b>Arch Arcades</b> - Where the fun never ends!<br />
+          <p className="text-2xl font-light pt-[45px] text-center">
+            <div className='text-3xl'>Welcome to <b>Arch Arcades</b> - Where the fun never ends!<br /><br /></div>
             We provide immersive experiences with each
-            of our games where you get to play along with, or against other players.<br />
+            of our games where you get to play along with, or against other players.<br /> <br />
             Are you ready to go head to head with some of the toughest players in your area? OR are you looking to create unforgettable memories with your buddies? If so, then don't
             miss out! Book today!
           </p>
@@ -59,11 +60,14 @@ const Home = () => {
       <section className="flex flex-col items-center pt-[60px] pb-[60px] bg-[var(--tertiary)] mt-[30px] border-t border-[var(--primary)]">
         <h2 className="text-6xl text-white font-bold">Reviews</h2>
         <div className="flex flex-row flex-wrap justify-center gap-4 pt-[40px]">
-          {reviews.map((review) => (
+          {reviews.map((review, index) => (
             <article className="">
-              <div className='hover:scale-105 hover:transition-[0.5s]'>
-                <Card> 
-                  <h2 className='border-b text-[24px] text-center font-bold text-[var(--darkG)]'>{review.name}</h2>
+              <div className='hover:scale-105 hover:transition-[0.5s]' 
+              onMouseEnter = {() =>setHoveredCard(index)}
+              onMouseLeave={() =>setHoveredCard(null)}>
+                
+                <Card hover={hoveredCard===index}> 
+                  <h2 className='border-b text-[24px] text-center font-bold '>{review.name}</h2>
                   <p className='pt-[20px]'>{review.text}</p>
                   <p className='font-bold text-[20px] text-center pt-[20px]'>{review.rating}</p>
                 </Card>
