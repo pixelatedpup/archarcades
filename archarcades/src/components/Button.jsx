@@ -18,6 +18,7 @@ const Button = ({submit=false, nav = "", text=""}) =>{
                     hover:border-[var(--light)]
                     transition-all
                     duration-500
+                    cursor-pointer
                 "
                 onClick={() => navigate(nav)}
                 >

@@ -3,7 +3,7 @@ const Nav = () =>{
     return(
         <>
             
-            <ul className="flex justify-center gap-4 pb-[60px] text-2xl font-light">
+            <ul className="flex justify-center gap-4 pb-[60px] text-[16px]]font-light">
                 <li>
                     <NavLink className= {({isActive}) =>
                         isActive 

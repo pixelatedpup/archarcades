@@ -47,7 +47,7 @@ const Events = () =>{
                             <h2>{event.people}</h2>
                             <div className="flex justify-end pt-[20px]">
                             <button
-                                className="bg-[var(--primary)] text-white p-[7px] rounded-2xl w-[180px] h-[50px] duration-[0.5s] hover:bg-[var(--light)] hover:text-black"
+                                className="bg-[var(--primary)] text-white p-[7px] rounded-2xl w-[180px] h-[50px] duration-[0.5s] hover:bg-[var(--light)] hover:text-black cursor-pointer"
                                 onClick={() => handleBooking(event.title)}
                             >
                                 Book Event
